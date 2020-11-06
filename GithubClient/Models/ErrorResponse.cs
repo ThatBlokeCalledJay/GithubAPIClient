@@ -10,6 +10,21 @@ namespace GithubClient.Models
         [JsonProperty("documentation_url")]
         public string DocumentationUrl { get; set; }
 
-        public static ErrorResponse Parse(string json) => JsonConvert.DeserializeObject<ErrorResponse>(json);
+        public static ErrorResponse Parse(string json)
+        {
+            try
+            {
+                var data = JsonConvert.DeserializeObject<ErrorResponse>(json);
+
+                return data;
+            }
+            catch
+            {
+                return new ErrorResponse
+                {
+                    Message = $"Parse Error: {json}"
+                };
+            }
+        }
     }
 }

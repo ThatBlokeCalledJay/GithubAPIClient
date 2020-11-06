@@ -4,6 +4,7 @@ using GithubClient.TokenProvider;
 
 namespace GithubClient
 {
+    /// <summary></summary>
     public class GithubClientOptions
     {
         /// <summary>Github token provider.</summary>

@@ -1,7 +1,7 @@
-﻿using System;
+﻿using GithubClient.Models;
+using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using GithubClient.Models;
 
 namespace GithubClient
 {
@@ -13,7 +13,6 @@ namespace GithubClient
 
         public GithubClient(GithubClientOptions options)
         {
-            
             _client = options.HttpClient ?? new HttpClient(new GithubClientMessageHandler(options.TokenProvider))
             {
                 BaseAddress = new Uri(GithubApiUrl)

@@ -3,7 +3,7 @@
 namespace GithubClient.Models
 {
     /// <summary></summary>
-    public class GithubApiResponse<T>
+    public class GithubApiResponse<T>: IGithubResponse
     {
         /// <summary></summary>
         public T Content { get; set; }
