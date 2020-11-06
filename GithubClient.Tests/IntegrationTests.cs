@@ -17,7 +17,7 @@ namespace GithubClient.Tests
 
             configurationBuilder
                 .AddEnvironmentVariables()
-                .AddUserSecrets("4986e3bc-c552-4e89-a375-49cc6cf3baef");
+                .AddUserSecrets<IntegrationTests>();
 
             _configuration = configurationBuilder.Build();
         }
